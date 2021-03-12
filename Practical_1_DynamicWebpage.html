@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Practical-1 Dynamic Webpage</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="Angular/Scripts/angular.min.js"></script>
+    <style>
+        div.carousel img{height: 650px; }
+        #row{min-height: 550px;}
+        #accordionExample{margin-top: 100px;}
+        @font-face {
+            font-family: dotGothic;
+            src: url(fonts/DotGothic16-Regular.ttf);}
+    </style>
+</head>
+<body  ng-app="myApp">
+    <!--Coursela-->
+    <div id="carouselExampleCaptions" class="carousel slide " data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="2500">
+            <img src="images/Banner.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h3 class="text-primary" id="coursela_text" style="font-family: dotGothic;font-size: 46px;">Digital.World  </h3>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2500">
+            <img src="images/angular.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2500">
+            <img src="images/docker.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2200">
+            <img src="images/nodeJs.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">        
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+    <!--Navbar-->
+    <nav class="navbar  navbar-expand-lg navbar-light bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Download</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  More
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">Documentation</a></li>
+                  <li><a class="dropdown-item" href="#">VCS</a></li>
+                  <li><a class="dropdown-item" href="#">APIs</a></li>
+                  <li><a class="dropdown-item" href="#">Register</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+<!--    Main Section 
+            //GridView System
+-->
+
+<!-- Sub Section 1-->
+    <div class="row" id="row" style="margin-top: 10px;" >
+      <div class="col-3" style="border-right:solid 1px;">
+        <div class="list-group">
+            <a href="#!angular" class="list-group-item list-group-item-action" aria-current="true">
+              <div class="d-flex w-100 justify-content-between">
+                <strong><h5 class="mb-1 text-danger">Angular Tutorials</h5></strong>
+              </div>
+              <p class="mb-1">AngularJs v1.8</p>
+              <small><strong>Angular</strong> is what HTML would have been, had it been designed for building web-apps.</small>
+            </a>
+            <a href="#!nodejs" class="list-group-item list-group-item-action">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1 text-danger">NodeJs</h5>
+              </div>
+              <p class="mb-1">NodeJs v15.9.1</p>
+              <small class="text-muted"><b>Node.js</b> is a JavaScript runtime built on Chrome's V8 JavaScript engine.</small>
+            </a>
+            <a href="#!docker" class="list-group-item list-group-item-action">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1 text-danger">Docker</h5>
+              </div>
+              <p class="mb-1">docker v19.03.15</p>
+              <small class="text-muted"><b>Docker</b> is a software platform that simplifies the process of building, running, managing and distributing applications</small>
+            </a>
+          </div>
+        </div>
+        <!-- Sub Section 2 -->
+        <div class="col-6" style="border-right:solid 1px;">
+          <!-- Registration Page(Section) -->
+          <fieldset >
+              <legend style="border-bottom: 1px solid ;"><h2 class="text-primary">Register</h2></legend>
+            <form class="row g-3">
+              <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail4">
+              </div>
+              <div class="col-md-6">
+                <label for="inputPassword4" class="form-label">Password</label>
+                <input type="password" class="form-control" id="inputPassword4">
+              </div>
+              <div class="col-12">
+                <label for="inputAddress" class="form-label">Address</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+              </div>
+              <div class="col-12">
+                <label for="inputAddress2" class="form-label">Address 2</label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+              </div>
+              <div class="col-md-6">
+                <label for="inputCity" class="form-label">City</label>
+                <input type="text" class="form-control" id="inputCity">
+              </div>
+              <div class="col-md-4">
+                <label for="inputState" class="form-label">State</label>
+                <select id="inputState" class="form-select">
+                  <option selected>Choose...</option>
+                  <option>...</option>
+                </select>
+              </div>
+              <div class="col-md-2">
+                <label for="inputZip" class="form-label">Zip</label>
+                <input type="text" class="form-control" id="inputZip">
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck">
+                  <label class="form-check-label" for="gridCheck">
+                    Check me out
+                  </label>
+                </div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary">Sign in</button>
+              </div>
+            </form>
+          </fieldset>
+
+
+        </div>
+        
+        <!-- Sub Section 3 -->
+        <div class="col-3">
+          <form class="row g-3 align-items-right">
+            <div class="col-8">
+              <label for="Email2" class="visually-hidden">Email</label>
+              <input type="text" class="form-control" id="Email2" placeholder="Email">
+            </div>
+            <div class="col-8">
+              <label for="inputPassword2" class="visually-hidden">Password</label>
+              <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+            </div>
+            <div class="col-6" >
+              <img class="img-thumbnail rounded" src="/images/login-rounded-right.png" alt="">
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Login
+              </button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title text-primary" id="exampleModalLabel">Login</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-info">
+                      Confirm your details??
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-success">Proceed</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <!-- Frequently asked #QNA -->
+          <div class="accordion" id="accordionExample">
+            <h4 class="accordion-header text-muted" id="headingOne">
+              Frequently Asked Questions!
+            </h4>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Best framework for Apps in 2021?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>Flutter</strong>,  if you want to become a mobile application developer then flutter is best option for you.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Is JavaScript is based on Java?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>No,</strong> JavaScript is mainly used/developed for fronted-backend, where <i>Java</i> is popular in Android application development.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed text-primary  " type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Can I learn JavaScript in one month??
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>It depends on you, </strong> it takes time, hard work and constistency to master the programming language. 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+</body>
+</html>
